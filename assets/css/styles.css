@@ -1,0 +1,559 @@
+@font-face {
+    font-family: "Houschka";
+    src: url("./../fonts/Houschka.ttf");
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: "Houschka", Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("./../images/background.png");
+}
+
+.navbar,
+.footer {
+    opacity: .8;
+    background-color: rgb(0, 0, 0);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: bold;
+}
+
+h4 {
+    margin-top: .4em;
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-card {
+    padding: 32px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    background-color: white;
+    box-shadow: 0px 0px 16px #ccc;
+}
+
+.section-title {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    /* color: #173b6c; */
+}
+
+.section-title p {
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+/* End general styles */
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5em !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #ccc !important;
+}
+
+.nav-link:active {
+    color: #ccc !important;
+}
+
+/* End navbar */
+
+/* Profile section */
+#profile {
+    width: 100%;
+    height: 100vh;
+    background: url("./../images/profile-background.png") top center;
+    background-size: cover;
+}
+
+#profile:before {
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#profile .profile-container {
+    position: relative;
+    z-index: 2;
+    min-width: 300px;
+}
+
+#profile h2 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}
+
+#profile p {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 26px;
+}
+
+#profile p span {
+    color: #fff;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #149ddd;
+}
+
+@media (min-width: 1024px) {
+    #profile {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    #profile h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #profile p {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+/* End profile section */
+
+/* About section */
+.about .section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+
+.about .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #333;
+}
+
+.about .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about .content ul li {
+    padding-bottom: 10px;
+}
+
+.about .content ul i {
+    font-size: 20px;
+    padding-right: 2px;
+    color: #333;
+}
+
+.about .content p:last-child {
+    margin-bottom: 0;
+}
+
+/* End about section */
+
+/* Personal skills section */
+.personal-skills p {
+    text-align: justify;
+}
+
+@media (max-width: 414px) {
+    .personal-skills {
+        margin-top: 0;
+        flex-direction: column;
+    }
+
+    .icon-container {
+        width: 100% !important;
+    }
+
+    .fa-calendar-check,
+    .fa-check-square,
+    .fa-users,
+    .fa-award {
+        font-size: 8em !important;
+    }
+}
+
+/* End personal skills section */
+
+/* Skills section */
+.skills .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+
+.skills span {
+    font-weight: bold;
+}
+
+/* End skills section */
+
+/* Resume section */
+.resume .section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+
+.resume .resume-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #050d18;
+    text-transform: uppercase;
+}
+
+.resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #1f5297;
+    position: relative;
+}
+
+.resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #050d18;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+    font-size: 16px;
+    background: #e4edf9;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.resume .resume-item ul li {
+    padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #1f5297;
+}
+
+/* End resume section */
+
+/* Knowledge section */
+.knowledge .section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+
+.knowledge .card {
+    box-shadow: 0px 0px 16px #ccc !important;
+}
+
+/* End knowledge section */
+
+/* Projects section */
+.projects .section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 130px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+
+.projects .card-deck .card {
+    box-shadow: 0px 0px 16px #ccc !important;
+}
+
+.projects .card-deck .card p {
+    text-align: justify;
+}
+
+/* End projects section */
+
+/* Contact section */
+.contact {
+    padding-bottom: 130px;
+}
+
+.contact .info {
+    padding: 30px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact .info i {
+    font-size: 20px;
+    color: #149ddd;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #dff3fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #050d18;
+}
+
+.contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #173b6c;
+}
+
+.contact .info .email p {
+    padding-top: 5px;
+}
+
+.contact .info .social-links {
+    padding-left: 60px;
+}
+
+.contact .info .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.contact .info .social-links a:hover {
+    background: #149ddd;
+    color: #fff;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+    background: #149ddd;
+    color: #fff;
+}
+
+.contact .php-email-form {
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact .php-email-form .form-group {
+    padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+    margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.contact .php-email-form input {
+    height: 44px;
+}
+
+.contact .php-email-form textarea {
+    padding: 10px 12px;
+}
+
+.contact .php-email-form button[type="submit"] {
+    background: #149ddd;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+    background: #37b3ed;
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Contact section */
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    right: 48px;
+    bottom: 96px;
+    z-index: 1;
+}
+
+.back-to-top i {
+    position: absolute;
+}
